@@ -30,6 +30,12 @@
 ### 1.6在广告位管理列表页，获取广告位的ID
 ![获取广告位](imgs/img06.png)
 
+注：您在测试中可使用如下id进行测试，测试id不会产生收益，应用上线时请使用您申请的正式id。
+
+|操作系统|  App_ID  |  Ad_Unit_id|
+|--------|----------|------------|
+|Android |5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC|
+
 ## 2. 添加MoPub SDK和PlayableAds SDK，步骤如下：
 ```
 dependencies {
