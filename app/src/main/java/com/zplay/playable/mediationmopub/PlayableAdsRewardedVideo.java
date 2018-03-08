@@ -54,6 +54,7 @@ public class PlayableAdsRewardedVideo extends CustomEventRewardedVideo{
     protected boolean checkAndInitializeSdk(@NonNull Activity launcherActivity, @NonNull Map<String, Object> localExtras, @NonNull Map<String, String> serverExtras) throws Exception {
         String appId = serverExtras.get("APPID");
         mPa = PlayableAds.init(launcherActivity, appId);
+        mPa.setAutoLoadAd(false);
         return true;
     }
 
