@@ -1,57 +1,57 @@
-## Directory
-1. Apply for app ID and ad unit ID on ZPLAY Ads platform
-2. Add Mopub SDK and PlayableAds SDK
-3. Add the following files into project
-4. Set ad unit for ZPLAY Ads on MoPub
-5. Add ZPLAY Ads as a new network on MoPub 
-6. Turn on ZPLAY Ads network on MoPub
-7. Confirm the configuration of ZPLAY Ads
-8. Use MoPub to request ZPLAY Ads in project
-9. Debugging
+## 目录
+1. 在可玩广告平台申请应用ID及广告位ID
+2. 添加MoPub SDK和PlayableAds SDK
+3. 将以下文件添加到工程里面 
+4. 在MoPub平台为可玩广告配置广告位 
+5. 在MoPub平台增加可玩广告为新的广告源 
+6. 在MoPub平台打开可玩广告广告源 
+7. 确认可玩广告配置成功 
+8. 在工程中使用MoPub请求可玩广告 
+9. 调试
 
 ---
 
-## 1. Apply for app ID and ad unit ID on ZPLAY Ads platform
-### 1.1 Click *ADD NEW APP* button in Application Management page
+## 1. 在可玩广告平台申请应用ID及广告位ID
+### 1.1 进入“应用管理”页面，点击添加“添加应用”按钮
 ![“应用管理”页面](imgs/img01.png)
 
-### 1.2 Fill in app information, and click *ADD* button, then go back to Application Management
+### 1.2 填写相关信息，点击“添加”按钮，返回应用管理列表页 
 ![添加](imgs/img02.png)
 
-### 1.3 Obtain your app ID in Application Management page
+### 1.3 在应用管理列表页，获取应用的ID
 ![应用管理列表页](imgs/img03.png)
 
-### 1.4 Click *Add New AdUnit* button in app list, or you are also available to do this in AdUnit Management page
+### 1.4 点击应用右侧的“创建广告位”按钮或者进入“广告位管理页面”点击“添加广告位”按钮
 ![创建广告位](imgs/img04.png)
 
-### 1.5 Fill in adunit information, and click *ADD* button, then go back to AdUnit Management
+### 1.5填写相关信息，点击“添加”按钮，返回广告位管理列表页
 ![添加](imgs/img05.png)
 
-### 1.6 Obtain your adunit ID in AdUnit Management page
+### 1.6在广告位管理列表页，获取广告位的ID
 ![获取广告位](imgs/img06.png)
 
-Note: You are available to use the following ID when testing(not charge). Please switch to the ID you applied in production mode.
+注：您在测试中可使用如下id进行测试，测试id不会产生收益，应用上线时请使用您申请的正式id。
 
-|OS|  App_ID  |  Ad_Unit_id|
+|操作系统|  App_ID  |  Ad_Unit_id|
 |--------|----------|------------|
 |Android |5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC|
 
-## 2. Add Mopub SDK and PlayableAds SDK as below:
+## 2. 添加MoPub SDK和PlayableAds SDK，步骤如下：
 ```
 dependencies {
     ...
-    // ZPLAY Ads dependency
+    // 可玩广告依赖
     compile 'com.playableads:playableads:2.0.1'
-    // Mopub dependency
+    // mopub广告依赖
     compile('com.mopub:mopub-sdk:4.16.0@aar') {
         transitive = true
     }
 }
 ```
-### 2.1 Add android project dependency
+### 2.1 添加android工程依赖
 
 
-### 2.2 Add MoPub-used components in Manifest file
+### 2.2 在Manifest文件下添加MoPub使用到的组件
 ```
 <application>
     <activity
@@ -73,84 +73,84 @@ dependencies {
 ```
 
 
-## 3. 将以下文件添加到工程里面 Add the following files into project
+## 3. 将以下文件添加到工程里面
 [PlayableAdsRewardedVideo.java](app/src/main/java/com/zplay/playable/mediationmopub/PlayableAdsRewardedVideo.java)
 确保导入相关的类之后没有错误提示，记录该文件包路径，例如：（com.zplay.playable.mediationmopub.PlayableAdsRewardedVideo），这个路径用于在MoPub平台配置playableAds信息。
 
-## 4. Set ad unit for ZPLAY Ads on MoPub 
-### 4.1 Create new adunit for ZPLAY Ads
-- a. Choose your app, click *New ad unit* button
+## 4. 在MoPub平台为可玩广告配置广告位
+### 4.1 为可玩广告新建广告位
+- a. 进入应用，点击“new add unit”按钮
 
 ![new add unit](imgs/img07.png)
 
-- b. Choose Rewarded video when creating adunit, then click *Save* button
+- b. 创建广告位，请注意format应该为Rewarded video，点击“save”按钮
 
 ![Rewarded video](imgs/img08.png) 
 
-- c. Obtain the new adunit ID
+- c. 获取新创建广告位的ad unit ID
 
 ![创建广告位](imgs/img09.png)
 
-### 4.2 Obtain the existed adunit ID
-- a. Choose your app and enter adunit list.Click the adunit, and click *Edit an unit*, then choose *View code integration* button.
+### 4.2 获取已有广告位的ID
+- a. 选择应用，进入广告位列表，选择要接入的广告位，点击进入。点击“edit ad unit”按钮，点击“view code integration”按钮
 
 ![view code integration](imgs/img10.png)
 
-- b. Obtain the adunit ID
+- b. 获取广告位的ad unit ID
 
 ![获取广告位](imgs/img11.png)
 
-## 5. Add ZPLAY Ads as a new network on MoPub
-### 5.1 Open Networks page, click *Add a Network* button
+## 5. 在MoPub平台增加可玩广告为新的广告源
+### 5.1 进入“networks”页面，点击“add a network”按钮
 ![add a network](imgs/img12.png)
 
 
-### 5.2 Click *Custom Native Network* link
+### 5.2 点击“custom native network“链接
 ![custom native network](imgs/img13.png)
 
-### 5.3 Set the title as ZPLAY Ads android（image 1), and configure ZPLAY Ads in the adunits which were applied in step 3(image 2 and 3).
+### 5.3 添加可玩广告平台名称为ZPLAY Ads android（图示1），并且在步骤3中申请的广告位中配置可玩广告（图示2和图示3）。
 
 ![配置](imgs/img14.png)
 
-- a. Add the followings to image 2:
+- a. 请在图示2的位置添加如下信息：
 ```
 com.zplay.playable.mediationmopub.PlayableAdsRewardedVideo
 ```
 
-(Note:Please fill in the existed position of PlayableAdsRewardedVideo in project.)
+注：(填写的是PlayableAdsRewardedVideo在项目中实际的位置)
 ```
 {
     "APPID": "androidDemoApp",
     "AdUnitId": "androidDemoAdUnit"
 }
 ```
-- b. Add the adunits you applied on ZPLAY Ads to image 3 as the following format:
-Note: If necessary, please view step 1.3 to know how to change androidDemoApp to the APPID you applied on ZPLAY Ads, and view step 1.6 to find the way to change androidDemoAdUnit to AdUnitId applied on ZPLAY Ads.
+- b. 请在图示3的位置添加在可玩广告平台申请的广告位信息，格式如下：
+注意：将androidDemoApp替换成您在可玩广告平台申请的APPID（步骤1.3），将androidDemoAdUnit替换成您在可玩广告平台申请的AdUnitId（步骤1.6）。
 
-## 6. Turn on ZPLAY Ads network on MoPub
-### 6.1 Open Segments page, and click *Global Segment* link
+## 6. 在MoPub平台打开可玩广告广告源
+### 6.1 进入“segments”页面，点击“Global Segment”链接
 ![Global Segment](imgs/img15.png)
 
-### 6.2 Find the app and adunit which have been integrated to ZPLAY Ads（as the MediationMopub in screenshot below), turn on ZPLAY Ads network(as the turn on button in screenshot below).
+### 6.2 找到接入可玩广告的应用（如示例中MediationMopub）及广告位（示例中的新可玩广告），打开可玩广告广告源（图中的turn on所示的按钮）
 ![turn on](imgs/img16.png)
 
 
-## 7. Confirm the configuration of ZPLAY Ads
-After step 6.2, the ZPLAY Ads network has been available already. Enter AdUnit Management page, the ad sources list will be shown as below if configuration is successful. If not, please check according to the previous steps.
+## 7. 确认可玩广告配置成功
+进入6.2 中已经打开可玩广告源的广告位管理页面，如果成功配置，则会在ad sources列表中会显示如下信息。如果未显示，请参照以上步骤进行检查。
 
 ![确认可玩广告配置成功](imgs/img17.png)
 
-## 8. Use MoPub to request ZPLAY Ads in project
-配置信息如下：Here are the configurations:
+## 8. 在工程中使用MoPub请求可玩广告
+配置信息如下：
 
 ![配置信息](imgs/img18.png)
 
-Image 1: Import MoPub-needed files
-Image 2: Initialize MoPub SDK
-Image 3: Request ad, please fill in the adunit ID applied on MoPub correctly(view step 4 for details).
-Image 4: Show ad, please fill in the adunit ID applied on MoPub correctly(view step 4 for details).
+图示1：导入MoPub需要的文件
+图示2：初始化MoPub SDK
+图示3：请求广告，请正确填入在MoPub平台申请的广告位ID（详见第4步）
+图示4：展示广告，请正确填入在MoPub平台申请的广告位ID（详见第4步）
 
-## 9. Debugging
-View MoPubRewardedVideoListener callback to determine whether the ad has been loaded successfully and find problems .
+## 9. 调试
+查看MoPubRewardedVideoListener回调中的信息，可判断是否加载成功，以及定位问题。
 
 ![调试信息](imgs/img19.png)
