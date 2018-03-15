@@ -75,7 +75,7 @@ dependencies {
 
 ## 3. 将以下文件添加到工程里面 Add the following files into project
 [PlayableAdsRewardedVideo.java](app/src/main/java/com/zplay/playable/mediationmopub/PlayableAdsRewardedVideo.java)
-确保导入相关的类之后没有错误提示，记录该文件包路径，例如：（com.zplay.playable.mediationmopub.PlayableAdsRewardedVideo），这个路径用于在MoPub平台配置playableAds信息。
+Please ensure no errors after classes imported. Then record the path of package, e.g （com.zplay.playable.mediationmopub.PlayableAdsRewardedVideo）, which is used to configure playableAds on MoPub.
 
 ## 4. Set ad unit for ZPLAY Ads on MoPub 
 ### 4.1 Create new adunit for ZPLAY Ads
