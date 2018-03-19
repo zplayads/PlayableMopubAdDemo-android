@@ -141,7 +141,7 @@ After step 6.2, the ZPLAY Ads network has been available already. Enter AdUnit M
 ![确认可玩广告配置成功](imgs/img17.png)
 
 ## 8. Use MoPub to request ZPLAY Ads in project
-配置信息如下：Here are the configurations:
+Here are the configurations:
 
 ![配置信息](imgs/img18.png)
 
