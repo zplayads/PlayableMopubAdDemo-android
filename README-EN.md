@@ -73,7 +73,7 @@ dependencies {
 ```
 
 
-## 3. 将以下文件添加到工程里面 Add the following files into project
+## 3. Add the following files into project
 [PlayableAdsRewardedVideo.java](app/src/main/java/com/zplay/playable/mediationmopub/PlayableAdsRewardedVideo.java)
 Please ensure no errors after classes imported. Then record the path of package, e.g （com.zplay.playable.mediationmopub.PlayableAdsRewardedVideo）, which is used to configure playableAds on MoPub.
 
