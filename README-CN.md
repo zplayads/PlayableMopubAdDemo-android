@@ -79,11 +79,11 @@ dependencies {
 
 ## 4. 在MoPub平台为可玩广告配置广告位
 ### 4.1 为可玩广告新建广告位
-- a. 进入应用，点击“new add unit”按钮
+- a. 进入应用，点击“New ad unit”按钮
 
 ![new add unit](imgs/img07.png)
 
-- b. 创建广告位，请注意format应该为Rewarded video，点击“save”按钮
+- b. 创建广告位，请注意Format应该为Rewarded video，点击“save”按钮
 
 ![Rewarded video](imgs/img08.png) 
 
@@ -101,18 +101,20 @@ dependencies {
 ![获取广告位](imgs/img11.png)
 
 ## 5. 在MoPub平台增加可玩广告为新的广告源
-### 5.1 进入“networks”页面，点击“add a network”按钮
+### 5.1 进入“Networks”页面，点击“New network”按钮
 ![add a network](imgs/img12.png)
 
 
-### 5.2 点击“custom native network“链接
+### 5.2 点击“Custom SDK network“链接
 ![custom native network](imgs/img13.png)
 
-### 5.3 添加可玩广告平台名称为ZPLAY Ads android（图示1），并且在步骤3中申请的广告位中配置可玩广告（图示2和图示3）。
+### 5.3 添加可玩广告平台名称为ZPLAY Ads Network，并且在步骤3中申请的广告位中配置可玩广告（图示1和图示2）。
 
 ![配置](imgs/img14.png)
+![配置](imgs/img14-2.png)
+![配置](imgs/img14-3.png)
 
-- a. 请在图示2的位置添加如下信息：
+- a. 请在图示1的位置添加如下信息：
 ```
 com.zplay.playable.mediationmopub.PlayableAdsRewardedVideo
 ```
@@ -120,11 +122,11 @@ com.zplay.playable.mediationmopub.PlayableAdsRewardedVideo
 注：(填写的是PlayableAdsRewardedVideo在项目中实际的位置)
 ```
 {
-    "APPID": "androidDemoApp",
-    "AdUnitId": "androidDemoAdUnit"
+    "APPID": "5C5419C7-A2DE-88BC-A311-C3E7A646F6AF",
+    "AdUnitId": "3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC"
 }
 ```
-- b. 请在图示3的位置添加在可玩广告平台申请的广告位信息，格式如下：
+- b. 请在图示2的位置添加在可玩广告平台申请的广告位信息，格式如下：
 注意：将androidDemoApp替换成您在可玩广告平台申请的APPID（步骤1.3），将androidDemoAdUnit替换成您在可玩广告平台申请的AdUnitId（步骤1.6）。
 
 ## 6. 在MoPub平台打开可玩广告广告源
