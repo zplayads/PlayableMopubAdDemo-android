@@ -123,11 +123,12 @@ com.zplay.playable.mediationmopub.PlayableAdsRewardedVideo
 (Note:Please fill in the existed position of PlayableAdsRewardedVideo in project.)
 
 - b. Add the adunits you applied on ZPLAY Ads to image 2 as the following format:
+```
 {
     "APPID": "5C5419C7-A2DE-88BC-A311-C3E7A646F6AF",
     "AdUnitId": "3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC"
 }
-
+```
 Note: If necessary, please view step 1.3 to know how to change androidDemoApp to the APPID you applied on ZPLAY Ads, and view step 1.6 to find the way to change androidDemoAdUnit to AdUnitId applied on ZPLAY Ads.
 
 ## 6. Turn on ZPLAY Ads network on MoPub
