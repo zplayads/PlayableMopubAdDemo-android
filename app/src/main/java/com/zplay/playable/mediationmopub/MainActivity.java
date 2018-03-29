@@ -19,6 +19,8 @@ import java.util.Set;
 public class MainActivity extends Activity {
     private static final String TAG = "MainActivity";
 
+    private static final String MOPUB_UNIT_ID = "ab638024c4b1408a9adf504c7a3fd066";
+
     View mLoadingView;
     TextView mLogView;
 
@@ -78,13 +80,13 @@ public class MainActivity extends Activity {
                 ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED   ){
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_PHONE_STATE}, 0);
         }
-        MoPubRewardedVideos.loadRewardedVideo("06df97f8f3f14b64b92b7ff0392f8a5a");
+        MoPubRewardedVideos.loadRewardedVideo(MOPUB_UNIT_ID);
         addLog("start loading advertising.");
     }
 
 
     public void presentAd(View view) {
-        MoPubRewardedVideos.showRewardedVideo("06df97f8f3f14b64b92b7ff0392f8a5a");
+        MoPubRewardedVideos.showRewardedVideo(MOPUB_UNIT_ID);
     }
 
 
