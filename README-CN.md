@@ -1,6 +1,6 @@
 ## 目录
 1. 在可玩广告平台申请应用ID及广告位ID
-2. 添加MoPub SDK和PlayableAds SDK
+2. 添加MoPub SDK和ZPLAY Ads SDK
 3. 将以下文件添加到工程里面 
 4. 在MoPub平台为可玩广告配置广告位 
 5. 在MoPub平台增加可玩广告为新的广告源 
@@ -32,9 +32,10 @@
 
 注：您在测试中可使用如下id进行测试，测试id不会产生收益，应用上线时请使用您申请的正式id。
 
-|操作系统|  App_ID  |  Ad_Unit_id|
-|--------|----------|------------|
-|Android |5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC|
+|操作系统|广告形式|  App_ID  |  Ad_Unit_id|
+|--------|---|----------|------------|
+|Android |激励视频|5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC|
+|Android|插屏|5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|19393189-C4EB-3886-60B9-13B39407064E|
 
 ## 2. 添加MoPub SDK和PlayableAds SDK，步骤如下：
 ```
