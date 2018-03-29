@@ -108,11 +108,13 @@ Please ensure no errors after classes imported. Then record the path of package,
 ### 5.2 Click *Custom Native Network* link
 ![custom native network](imgs/img13.png)
 
-### 5.3 Set the title as ZPLAY Ads android（image 1), and configure ZPLAY Ads in the adunits which were applied in step 3(image 2 and 3).
+### 5.3 Set the title as ZPLAY Ads android, and configure ZPLAY Ads in the adunits which were applied in step 3(image 1 and 2).
 
 ![配置](imgs/img14.png)
+![配置](imgs/img14-2.png)
+![配置](imgs/img14-3.png)
 
-- a. Add the followings to image 2:
+- a. Add the followings to image 1:
 ```
 com.zplay.playable.mediationmopub.PlayableAdsRewardedVideo
 ```
