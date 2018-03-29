@@ -1,6 +1,6 @@
 ## Directory
 1. Apply for app ID and ad unit ID on ZPLAY Ads platform
-2. Add Mopub SDK and PlayableAds SDK
+2. Add MoPub SDK and ZPLAY Ads SDK
 3. Add the following files into project
 4. Set ad unit for ZPLAY Ads on MoPub
 5. Add ZPLAY Ads as a new network on MoPub 
@@ -32,11 +32,12 @@
 
 Note: You are available to use the following ID when testing(not charge). Please switch to the ID you applied in production mode.
 
-|OS|  App_ID  |  Ad_Unit_id|
-|--------|----------|------------|
-|Android |5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC|
+|OS|Ad_Type|  App_ID  |  Ad_Unit_id|
+|--------|---|----------|------------|
+|Android|Rewarded video|5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC|
+|Android|Interstitial|5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|19393189-C4EB-3886-60B9-13B39407064E|
 
-## 2. Add Mopub SDK and PlayableAds SDK as below:
+## 2. Add MoPub SDK and ZPLAY Ads SDK as below:
 ```
 dependencies {
     ...
@@ -101,14 +102,14 @@ Please ensure no errors after classes imported. Then record the path of package,
 ![获取广告位](imgs/img11.png)
 
 ## 5. Add ZPLAY Ads as a new network on MoPub
-### 5.1 Open Networks page, click *Add a Network* button
+### 5.1 Open Networks page, click *New network* button
 ![add a network](imgs/img12.png)
 
 
-### 5.2 Click *Custom Native Network* link
+### 5.2 Click *Custom SDK Network* link
 ![custom native network](imgs/img13.png)
 
-### 5.3 Set the title as ZPLAY Ads android, and configure ZPLAY Ads in the adunits which were applied in step 3(image 1 and 2).
+### 5.3 Set the title as ZPLAY Ads Network, and configure ZPLAY Ads in the adunits which were applied in step 3(image 1 and 2).
 
 ![配置](imgs/img14.png)
 ![配置](imgs/img14-2.png)
@@ -121,16 +122,16 @@ com.zplay.playable.mediationmopub.PlayableAdsRewardedVideo
 
 (Note:Please fill in the existed position of PlayableAdsRewardedVideo in project.)
 ```
+- b. Add the adunits you applied on ZPLAY Ads to image 2 as the following format:
 {
     "APPID": "5C5419C7-A2DE-88BC-A311-C3E7A646F6AF",
     "AdUnitId": "3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC"
 }
 ```
-- b. Add the adunits you applied on ZPLAY Ads to image 3 as the following format:
 Note: If necessary, please view step 1.3 to know how to change androidDemoApp to the APPID you applied on ZPLAY Ads, and view step 1.6 to find the way to change androidDemoAdUnit to AdUnitId applied on ZPLAY Ads.
 
 ## 6. Turn on ZPLAY Ads network on MoPub
-### 6.1 Open Segments page, and click *Global Segment* link
+### 6.1 Open Segments page, and click Global Segment
 ![Global Segment](imgs/img15.png)
 
 ### 6.2 Find the app and adunit which have been integrated to ZPLAY Ads（as the MediationMopub in screenshot below), turn on ZPLAY Ads network(as the turn on button in screenshot below).
@@ -147,8 +148,8 @@ Here are the configurations:
 
 ![配置信息](imgs/img18.png)
 
-Image 1: Import MoPub-needed files
-Image 2: Initialize MoPub SDK
+Image 1: Import MoPub-needed files.
+Image 2: Initialize MoPub SDK.
 Image 3: Request ad, please fill in the adunit ID applied on MoPub correctly(view step 4 for details).
 Image 4: Show ad, please fill in the adunit ID applied on MoPub correctly(view step 4 for details).
 
