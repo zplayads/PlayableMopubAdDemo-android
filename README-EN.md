@@ -121,7 +121,7 @@ com.zplay.playable.mediationmopub.PlayableAdsRewardedVideo
 ```
 
 (Note:Please fill in the existed position of PlayableAdsRewardedVideo in project.)
-```
+
 - b. Add the adunits you applied on ZPLAY Ads to image 2 as the following format:
 {
     "APPID": "5C5419C7-A2DE-88BC-A311-C3E7A646F6AF",
