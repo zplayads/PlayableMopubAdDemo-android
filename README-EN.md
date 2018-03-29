@@ -122,8 +122,8 @@ com.zplay.playable.mediationmopub.PlayableAdsRewardedVideo
 (Note:Please fill in the existed position of PlayableAdsRewardedVideo in project.)
 ```
 {
-    "APPID": "androidDemoApp",
-    "AdUnitId": "androidDemoAdUnit"
+    "APPID": "5C5419C7-A2DE-88BC-A311-C3E7A646F6AF",
+    "AdUnitId": "3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC"
 }
 ```
 - b. Add the adunits you applied on ZPLAY Ads to image 3 as the following format:
