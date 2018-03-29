@@ -37,7 +37,7 @@
 |Android |激励视频|5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC|
 |Android|插屏|5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|19393189-C4EB-3886-60B9-13B39407064E|
 
-## 2. 添加MoPub SDK和PlayableAds SDK，步骤如下：
+## 2. 添加MoPub SDK和ZPLAY Ads SDK，步骤如下：
 ```
 dependencies {
     ...
@@ -49,7 +49,7 @@ dependencies {
     }
 }
 ```
-### 2.1 添加android工程依赖
+### 2.1 添加Android工程依赖
 
 
 ### 2.2 在Manifest文件下添加MoPub使用到的组件
@@ -93,7 +93,7 @@ dependencies {
 ![创建广告位](imgs/img09.png)
 
 ### 4.2 获取已有广告位的ID
-- a. 选择应用，进入广告位列表，选择要接入的广告位，点击进入。点击“edit ad unit”按钮，点击“view code integration”按钮
+- a. 选择应用，进入广告位列表，选择要接入的广告位，点击进入。点击“Edit ad unit”按钮，点击“view code integration”按钮
 
 ![view code integration](imgs/img10.png)
 
