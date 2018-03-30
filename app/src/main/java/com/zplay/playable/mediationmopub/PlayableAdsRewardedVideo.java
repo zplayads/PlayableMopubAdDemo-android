@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.mopub.common.LifecycleListener;
+import com.mopub.common.MoPubReward;
 import com.mopub.mobileads.CustomEventRewardedVideo;
 import com.mopub.mobileads.MoPubErrorCode;
 import com.mopub.mobileads.MoPubRewardedVideoManager;
@@ -39,6 +40,11 @@ public class PlayableAdsRewardedVideo extends CustomEventRewardedVideo{
 
             @Override
             public void playableAdsIncentive() {
+                MoPubRewardedVideoManager.onRewardedVideoCompleted(PlayableAdsRewardedVideo.class, adUnitId, MoPubReward.success("ZPLAYAds", 1));
+            }
+
+            @Override
+            public void onAdClosed() {
                 MoPubRewardedVideoManager.onRewardedVideoClosed(PlayableAdsRewardedVideo.class, adUnitId);
             }
         });
