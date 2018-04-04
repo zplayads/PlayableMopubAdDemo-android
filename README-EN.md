@@ -42,7 +42,7 @@ Note: You are available to use the following ID when testing(not charge). Please
 dependencies {
     ...
     // ZPLAY Ads dependency
-    compile 'com.playableads:playableads:2.0.2'
+    compile 'com.playableads:playableads:2.0.3'
     // Mopub dependency
     compile('com.mopub:mopub-sdk:4.16.0@aar') {
         transitive = true
@@ -75,8 +75,8 @@ dependencies {
 
 
 ## 3. Add the following files into project
-[PlayableAdsRewardedVideo.java](app/src/main/java/com/zplay/playable/mediationmopub/PlayableAdsRewardedVideo.java)
-Please ensure no errors after classes imported. Then record the path of package, e.g （com.zplay.playable.mediationmopub.PlayableAdsRewardedVideo）, which is used to configure playableAds on MoPub.
+[ZPLAYAdsRewardedVideo.java](app/src/main/java/com/zplay/playable/mediationmopub/ZPLAYAdsRewardedVideo.java)
+Please ensure no errors after classes imported. Then record the path of package, e.g （com.zplay.playable.mediationmopub.ZPLAYAdsRewardedVideo）, which is used to configure ZPLAYAds on MoPub.
 
 ## 4. Set ad unit for ZPLAY Ads on MoPub 
 ### 4.1 Create new adunit for ZPLAY Ads
@@ -117,10 +117,10 @@ Please ensure no errors after classes imported. Then record the path of package,
 
 - a. Add the followings to image 1:
 ```
-com.zplay.playable.mediationmopub.PlayableAdsRewardedVideo
+com.zplay.playable.mediationmopub.ZPLAYAdsRewardedVideo
 ```
 
-(Note:Please fill in the existed position of PlayableAdsRewardedVideo in project.)
+(Note:Please fill in the existed position of ZPLAYAdsRewardedVideo in project.)
 
 - b. Add the adunits you applied on ZPLAY Ads to image 2 as the following format:
 ```
@@ -129,7 +129,7 @@ com.zplay.playable.mediationmopub.PlayableAdsRewardedVideo
     "AdUnitId": "3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC"
 }
 ```
-Note: If necessary, please view step 1.3 to know how to change androidDemoApp to the APPID you applied on ZPLAY Ads, and view step 1.6 to find the way to change androidDemoAdUnit to AdUnitId applied on ZPLAY Ads.
+Note: If necessary, please view step 1.3 to know how to change 5C5419C7-A2DE-88BC-A311-C3E7A646F6AF to the APPID you applied on ZPLAY Ads, and view step 1.6 to find the way to change 3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC to AdUnitId applied on ZPLAY Ads.
 
 ## 6. Turn on ZPLAY Ads network on MoPub
 ### 6.1 Open Segments page, and click Global Segment

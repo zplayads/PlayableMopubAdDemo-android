@@ -21,7 +21,7 @@ import java.util.Map;
  * Created by lgd on 2017/11/8.
  */
 
-public class PlayableAdsRewardedVideo extends CustomEventRewardedVideo{
+public class ZPLAYAdsRewardedVideo extends CustomEventRewardedVideo{
     private PlayableAds mPa;
     private String adUnitId;
 
@@ -32,20 +32,31 @@ public class PlayableAdsRewardedVideo extends CustomEventRewardedVideo{
 
     @Override
     protected void showVideo() {
+
         mPa.presentPlayableAD(adUnitId, new SimplePlayLoadingListener() {
             @Override
             public void onAdsError(int i, String s) {
-                MoPubRewardedVideoManager.onRewardedVideoPlaybackError(PlayableAdsRewardedVideo.class, adUnitId, MoPubErrorCode.VIDEO_PLAYBACK_ERROR);
+                MoPubRewardedVideoManager.onRewardedVideoPlaybackError(ZPLAYAdsRewardedVideo.class, adUnitId, MoPubErrorCode.VIDEO_PLAYBACK_ERROR);
             }
 
             @Override
             public void playableAdsIncentive() {
-                MoPubRewardedVideoManager.onRewardedVideoCompleted(PlayableAdsRewardedVideo.class, adUnitId, MoPubReward.success("ZPLAYAds", 1));
+                MoPubRewardedVideoManager.onRewardedVideoCompleted(ZPLAYAdsRewardedVideo.class, adUnitId, MoPubReward.success("ZPLAYAds", 1));
             }
 
             @Override
             public void onAdClosed() {
-                MoPubRewardedVideoManager.onRewardedVideoClosed(PlayableAdsRewardedVideo.class, adUnitId);
+                MoPubRewardedVideoManager.onRewardedVideoClosed(ZPLAYAdsRewardedVideo.class, adUnitId);
+            }
+
+            @Override
+            public void onLandingPageInstallBtnClicked() {
+                MoPubRewardedVideoManager.onRewardedVideoClicked(ZPLAYAdsRewardedVideo.class, adUnitId);
+            }
+
+            @Override
+            public void onVideoStart() {
+                MoPubRewardedVideoManager.onRewardedVideoStarted(ZPLAYAdsRewardedVideo.class, adUnitId);
             }
         });
     }
@@ -70,12 +81,12 @@ public class PlayableAdsRewardedVideo extends CustomEventRewardedVideo{
         mPa.requestPlayableAds(adUnitId, new PlayPreloadingListener() {
             @Override
             public void onLoadFinished() {
-                MoPubRewardedVideoManager.onRewardedVideoLoadSuccess(PlayableAdsRewardedVideo.class, adUnitId);
+                MoPubRewardedVideoManager.onRewardedVideoLoadSuccess(ZPLAYAdsRewardedVideo.class, adUnitId);
             }
 
             @Override
             public void onLoadFailed(int i, String s) {
-                MoPubRewardedVideoManager.onRewardedVideoLoadFailure(PlayableAdsRewardedVideo.class, adUnitId, MoPubErrorCode.MRAID_LOAD_ERROR);
+                MoPubRewardedVideoManager.onRewardedVideoLoadFailure(ZPLAYAdsRewardedVideo.class, adUnitId, MoPubErrorCode.MRAID_LOAD_ERROR);
             }
         });
     }

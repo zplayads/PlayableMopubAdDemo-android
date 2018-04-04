@@ -1,11 +1,8 @@
 package com.zplay.playable.mediationmopub;
 
-import android.Manifest;
 import android.app.Activity;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.widget.TextView;
 
@@ -76,10 +73,6 @@ public class MainActivity extends Activity {
     public void requestAd(View view) {
         mLogView.setText("");
         mLoadingView.setVisibility(View.VISIBLE);
-        if(ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED ||
-                ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED   ){
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_PHONE_STATE}, 0);
-        }
         MoPubRewardedVideos.loadRewardedVideo(MOPUB_UNIT_ID);
         addLog("start loading advertising.");
     }

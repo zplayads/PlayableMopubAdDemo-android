@@ -75,8 +75,8 @@ dependencies {
 
 
 ## 3. 将以下文件添加到工程里面
-[PlayableAdsRewardedVideo.java](app/src/main/java/com/zplay/playable/mediationmopub/PlayableAdsRewardedVideo.java)
-确保导入相关的类之后没有错误提示，记录该文件包路径，例如：（com.zplay.playable.mediationmopub.PlayableAdsRewardedVideo），这个路径用于在MoPub平台配置playableAds信息。
+[ZPLAYAdsRewardedVideo.java](app/src/main/java/com/zplay/playable/mediationmopub/ZPLAYAdsRewardedVideo.java)
+确保导入相关的类之后没有错误提示，记录该文件包路径，例如：（com.zplay.playable.mediationmopub.ZPLAYAdsRewardedVideo），这个路径用于在MoPub平台配置ZPLAYAds信息。
 
 ## 4. 在MoPub平台为可玩广告配置广告位
 ### 4.1 为可玩广告新建广告位
@@ -117,10 +117,10 @@ dependencies {
 
 - a. 请在图示1的位置添加如下信息：
 ```
-com.zplay.playable.mediationmopub.PlayableAdsRewardedVideo
+com.zplay.playable.mediationmopub.ZPLAYAdsRewardedVideo
 ```
 
-注：(填写的是PlayableAdsRewardedVideo在项目中实际的位置)
+注：(填写的是ZPLAYAdsRewardedVideo在项目中实际的位置)
 ```
 {
     "APPID": "5C5419C7-A2DE-88BC-A311-C3E7A646F6AF",
@@ -128,7 +128,7 @@ com.zplay.playable.mediationmopub.PlayableAdsRewardedVideo
 }
 ```
 - b. 请在图示2的位置添加在可玩广告平台申请的广告位信息，格式如下：
-注意：将androidDemoApp替换成您在可玩广告平台申请的APPID（步骤1.3），将androidDemoAdUnit替换成您在可玩广告平台申请的AdUnitId（步骤1.6）。
+注意：将5C5419C7-A2DE-88BC-A311-C3E7A646F6AF替换成您在可玩广告平台申请的APPID（步骤1.3），将3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC替换成您在可玩广告平台申请的AdUnitId（步骤1.6）。
 
 ## 6. 在MoPub平台打开可玩广告广告源
 ### 6.1 进入“segments”页面，点击“Global Segment”链接
