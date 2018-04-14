@@ -84,7 +84,7 @@ dependencies {
 
 ![new add unit](imgs/img07.png)
 
-- b. 创建广告位，请注意Format应该为Rewarded video，点击“save”按钮
+- b. 创建广告位，请注意Format应该为Rewarded video或Fullscreen，点击“save”按钮，此处以Rewarded video为例
 
 ![Rewarded video](imgs/img08.png) 
 
@@ -128,7 +128,7 @@ com.zplay.playable.mediationmopub.PlayableAdsRewardedVideo
 }
 ```
 - b. 请在图示2的位置添加在可玩广告平台申请的广告位信息，格式如下：
-注意：将androidDemoApp替换成您在可玩广告平台申请的APPID（步骤1.3），将androidDemoAdUnit替换成您在可玩广告平台申请的AdUnitId（步骤1.6）。
+注意：将AndroidDemoApp替换成您在可玩广告平台申请的APPID（步骤1.3），将AndroidDemoAdUnit替换成您在可玩广告平台申请的AdUnitId（步骤1.6）。
 
 ## 6. 在MoPub平台打开可玩广告广告源
 ### 6.1 进入“segments”页面，点击“Global Segment”链接

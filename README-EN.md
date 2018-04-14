@@ -41,9 +41,9 @@ Note: You are available to use the following ID when testing(not charge). Please
 ```
 dependencies {
     ...
-    // 可玩广告依赖
+    // ZPLAY Ads dependency
     compile 'com.playableads:playableads:2.0.3'
-    // mopub广告依赖
+    // Mopub dependency
     compile('com.mopub:mopub-sdk:4.20.0@aar') {
         transitive = true
     }
@@ -84,7 +84,7 @@ Please ensure no errors after classes imported. Then record the path of package,
 
 ![new add unit](imgs/img07.png)
 
-- b. Choose Rewarded video when creating adunit, then click *Save* button
+- b. Choose Rewarded video or Fullscreen when creating adunit, then click *Save* button, take Rewarded video as an example here
 
 ![Rewarded video](imgs/img08.png) 
 
