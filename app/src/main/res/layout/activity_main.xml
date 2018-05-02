@@ -1,41 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
     android:orientation="vertical"
-    tools:context="com.zplay.playable.mediationmopub.MainActivity">
+    android:padding="20dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="requestAd"
-            android:text="requestAd"
-            android:textAllCaps="false" />
+        android:layout_gravity="center_horizontal"
+        android:onClick="showRewardedVideo"
+        android:text="Rewarded Video"
+        android:textAllCaps="false"
+        android:textSize="28sp" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="presentAd"
-            android:text="present"
-            android:textAllCaps="false" />
-
-        <ProgressBar
-            android:id="@+id/progress_bar"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:visibility="gone"/>
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/log_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="showInterstitial"
+        android:text="Interstitial"
+        android:textAllCaps="false"
+        android:textSize="28sp" />
 </LinearLayout>

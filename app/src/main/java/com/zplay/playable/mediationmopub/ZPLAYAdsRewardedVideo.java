@@ -3,6 +3,8 @@ package com.zplay.playable.mediationmopub;
 import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
+import android.util.Log;
 
 import com.mopub.common.LifecycleListener;
 import com.mopub.common.MoPubReward;
@@ -21,9 +23,37 @@ import java.util.Map;
  * Created by lgd on 2017/11/8.
  */
 
-public class ZPLAYAdsRewardedVideo extends CustomEventRewardedVideo{
+public class ZPLAYAdsRewardedVideo extends CustomEventRewardedVideo {
+    private static final String TAG = "ZPLAYAdsRewardedVideo";
     private PlayableAds mPa;
     private String adUnitId;
+
+    @Override
+    protected boolean checkAndInitializeSdk(@NonNull Activity launcherActivity, @NonNull Map<String, Object> localExtras, @NonNull Map<String, String> serverExtras) throws Exception {
+        String appId = serverExtras.get("APPID");
+        mPa = PlayableAds.init(launcherActivity, appId);
+        mPa.setAutoLoadAd(false);
+        Log.d(TAG, "PlayableAds init: " + !TextUtils.isEmpty(appId));
+        return true;
+    }
+
+    @Override
+    protected void loadWithSdkInitialized(@NonNull Activity activity, @NonNull Map<String, Object> localExtras, @NonNull Map<String, String> serverExtras) throws Exception {
+        adUnitId = serverExtras.get("AdUnitId");
+        Log.d(TAG, "loadWithSdkInitialized");
+        mPa.requestPlayableAds(adUnitId, new PlayPreloadingListener() {
+            @Override
+            public void onLoadFinished() {
+                MoPubRewardedVideoManager.onRewardedVideoLoadSuccess(ZPLAYAdsRewardedVideo.class, adUnitId);
+            }
+
+            @Override
+            public void onLoadFailed(int i, String s) {
+                Log.d(TAG, "onLoadFailed: " + s);
+                MoPubRewardedVideoManager.onRewardedVideoLoadFailure(ZPLAYAdsRewardedVideo.class, adUnitId, MoPubErrorCode.MRAID_LOAD_ERROR);
+            }
+        });
+    }
 
     @Override
     protected boolean hasVideoAvailable() {
@@ -36,6 +66,7 @@ public class ZPLAYAdsRewardedVideo extends CustomEventRewardedVideo{
         mPa.presentPlayableAD(adUnitId, new SimplePlayLoadingListener() {
             @Override
             public void onAdsError(int i, String s) {
+                Log.d(TAG, "onAdsError: ");
                 MoPubRewardedVideoManager.onRewardedVideoPlaybackError(ZPLAYAdsRewardedVideo.class, adUnitId, MoPubErrorCode.VIDEO_PLAYBACK_ERROR);
             }
 
@@ -46,6 +77,7 @@ public class ZPLAYAdsRewardedVideo extends CustomEventRewardedVideo{
 
             @Override
             public void onAdClosed() {
+                Log.d(TAG, "onAdClosed: ");
                 MoPubRewardedVideoManager.onRewardedVideoClosed(ZPLAYAdsRewardedVideo.class, adUnitId);
             }
 
@@ -56,6 +88,7 @@ public class ZPLAYAdsRewardedVideo extends CustomEventRewardedVideo{
 
             @Override
             public void onVideoStart() {
+                Log.d(TAG, "onVideoStart: ");
                 MoPubRewardedVideoManager.onRewardedVideoStarted(ZPLAYAdsRewardedVideo.class, adUnitId);
             }
         });
@@ -65,30 +98,6 @@ public class ZPLAYAdsRewardedVideo extends CustomEventRewardedVideo{
     @Override
     protected LifecycleListener getLifecycleListener() {
         return null;
-    }
-
-    @Override
-    protected boolean checkAndInitializeSdk(@NonNull Activity launcherActivity, @NonNull Map<String, Object> localExtras, @NonNull Map<String, String> serverExtras) throws Exception {
-        String appId = serverExtras.get("APPID");
-        mPa = PlayableAds.init(launcherActivity, appId);
-        mPa.setAutoLoadAd(false);
-        return true;
-    }
-
-    @Override
-    protected void loadWithSdkInitialized(@NonNull Activity activity, @NonNull Map<String, Object> localExtras, @NonNull Map<String, String> serverExtras) throws Exception {
-        adUnitId = serverExtras.get("AdUnitId");
-        mPa.requestPlayableAds(adUnitId, new PlayPreloadingListener() {
-            @Override
-            public void onLoadFinished() {
-                MoPubRewardedVideoManager.onRewardedVideoLoadSuccess(ZPLAYAdsRewardedVideo.class, adUnitId);
-            }
-
-            @Override
-            public void onLoadFailed(int i, String s) {
-                MoPubRewardedVideoManager.onRewardedVideoLoadFailure(ZPLAYAdsRewardedVideo.class, adUnitId, MoPubErrorCode.MRAID_LOAD_ERROR);
-            }
-        });
     }
 
     @NonNull
