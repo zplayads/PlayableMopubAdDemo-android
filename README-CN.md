@@ -84,7 +84,7 @@ dependencies {
 
 ![new add unit](imgs/img07.png)
 
-- b. 创建广告位，请注意Format应该为Rewarded video，点击“save”按钮
+- b. 创建广告位，请注意Format应该为Rewarded video或Fullscreen，点击“save”按钮，此处以Rewarded video为例
 
 ![Rewarded video](imgs/img08.png) 
 
@@ -127,7 +127,8 @@ com.zplay.playable.mediationmopub.ZPLAYAdsRewardedVideo
     "AdUnitId": "3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC"
 }
 ```
-- b. 请在图示2的位置添加在可玩广告平台申请的广告位信息，格式如下：
+- b. 请在图示2的位置添加在可玩广告平台申请的广告位信息
+
 注意：将5C5419C7-A2DE-88BC-A311-C3E7A646F6AF替换成您在可玩广告平台申请的APPID（步骤1.3），将3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC替换成您在可玩广告平台申请的AdUnitId（步骤1.6）。
 
 ## 6. 在MoPub平台打开可玩广告广告源
