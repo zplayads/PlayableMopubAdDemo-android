@@ -32,17 +32,17 @@
 
 注：您在测试中可使用如下id进行测试，测试id不会产生收益，应用上线时请使用您申请的正式id。
 
-|操作系统|广告形式|  App_ID  |  Ad_Unit_id|
-|--------|---|----------|------------|
-|Android |激励视频|5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC|
-|Android|插屏|5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|19393189-C4EB-3886-60B9-13B39407064E|
+|广告形式|  App_ID  |  Ad_Unit_id|
+|---|----------|------------|
+|可玩广告|5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC|
+|插屏广告|5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|19393189-C4EB-3886-60B9-13B39407064E|
 
 ## 2. 添加MoPub SDK和ZPLAY Ads SDK，步骤如下：
 ```
 dependencies {
     ...
     // 可玩广告依赖
-    compile 'com.playableads:playableads:2.0.3'
+    compile 'com.playableads:playableads:2.0.4'
     // mopub广告依赖
     compile('com.mopub:mopub-sdk:4.20.0@aar') {
         transitive = true
