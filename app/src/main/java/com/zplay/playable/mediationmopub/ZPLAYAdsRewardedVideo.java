@@ -11,9 +11,9 @@ import com.mopub.common.MoPubReward;
 import com.mopub.mobileads.CustomEventRewardedVideo;
 import com.mopub.mobileads.MoPubErrorCode;
 import com.mopub.mobileads.MoPubRewardedVideoManager;
+import com.playableads.PlayLoadingListener;
 import com.playableads.PlayPreloadingListener;
 import com.playableads.PlayableAds;
-import com.playableads.SimplePlayLoadingListener;
 
 import java.util.Map;
 
@@ -63,16 +63,25 @@ public class ZPLAYAdsRewardedVideo extends CustomEventRewardedVideo {
     @Override
     protected void showVideo() {
 
-        mPa.presentPlayableAD(adUnitId, new SimplePlayLoadingListener() {
+        mPa.presentPlayableAD(adUnitId, new PlayLoadingListener() {
             @Override
-            public void onAdsError(int i, String s) {
-                Log.d(TAG, "onAdsError: ");
-                MoPubRewardedVideoManager.onRewardedVideoPlaybackError(ZPLAYAdsRewardedVideo.class, adUnitId, MoPubErrorCode.VIDEO_PLAYBACK_ERROR);
+            public void onVideoStart() {
+                Log.d(TAG, "onVideoStart: ");
+                MoPubRewardedVideoManager.onRewardedVideoStarted(ZPLAYAdsRewardedVideo.class, adUnitId);
+            }
+
+            @Override
+            public void onVideoFinished() {
             }
 
             @Override
             public void playableAdsIncentive() {
                 MoPubRewardedVideoManager.onRewardedVideoCompleted(ZPLAYAdsRewardedVideo.class, adUnitId, MoPubReward.success("ZPLAYAds", 1));
+            }
+
+            @Override
+            public void onLandingPageInstallBtnClicked() {
+                MoPubRewardedVideoManager.onRewardedVideoClicked(ZPLAYAdsRewardedVideo.class, adUnitId);
             }
 
             @Override
@@ -82,14 +91,9 @@ public class ZPLAYAdsRewardedVideo extends CustomEventRewardedVideo {
             }
 
             @Override
-            public void onLandingPageInstallBtnClicked() {
-                MoPubRewardedVideoManager.onRewardedVideoClicked(ZPLAYAdsRewardedVideo.class, adUnitId);
-            }
-
-            @Override
-            public void onVideoStart() {
-                Log.d(TAG, "onVideoStart: ");
-                MoPubRewardedVideoManager.onRewardedVideoStarted(ZPLAYAdsRewardedVideo.class, adUnitId);
+            public void onAdsError(int i, String s) {
+                Log.d(TAG, "onAdsError: ");
+                MoPubRewardedVideoManager.onRewardedVideoPlaybackError(ZPLAYAdsRewardedVideo.class, adUnitId, MoPubErrorCode.VIDEO_PLAYBACK_ERROR);
             }
         });
     }

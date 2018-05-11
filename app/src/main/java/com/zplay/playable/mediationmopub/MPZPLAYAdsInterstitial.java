@@ -59,19 +59,6 @@ public class MPZPLAYAdsInterstitial extends CustomEventInterstitial {
     @Override
     protected void showInterstitial() {
         mPa.presentPlayableAD(adUnitId, new SimplePlayLoadingListener() {
-            @Override
-            public void onAdsError(int i, String s) {
-                Log.d(TAG, "presentPlayableAD onAdsError: " + s);
-            }
-
-            @Override
-            public void onAdClosed() {
-                if (mInterstitialListener != null) {
-                    mInterstitialListener.onInterstitialDismissed();
-                } else {
-                    Log.d(TAG, "onLoadFailed: listener is null");
-                }
-            }
 
             @Override
             public void onLandingPageInstallBtnClicked() {
@@ -89,6 +76,20 @@ public class MPZPLAYAdsInterstitial extends CustomEventInterstitial {
                 } else {
                     Log.d(TAG, "onLoadFailed: listener is null");
                 }
+            }
+
+            @Override
+            public void onAdClosed() {
+                if (mInterstitialListener != null) {
+                    mInterstitialListener.onInterstitialDismissed();
+                } else {
+                    Log.d(TAG, "onLoadFailed: listener is null");
+                }
+            }
+
+            @Override
+            public void onAdsError(int i, String s) {
+                Log.d(TAG, "presentPlayableAD onAdsError: " + s);
             }
         });
     }
