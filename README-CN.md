@@ -42,7 +42,7 @@
 dependencies {
     ...
     // 可玩广告依赖
-    compile 'com.playableads:playableads:2.0.7'
+    compile 'com.playableads:playableads:2.1.1'
     // mopub广告依赖
     compile('com.mopub:mopub-sdk:4.20.0@aar') {
         transitive = true
