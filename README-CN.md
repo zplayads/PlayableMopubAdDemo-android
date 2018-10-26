@@ -19,7 +19,7 @@
 a. 若您的应用已上线，且为Google Play渠道的应用，可直接填入应用包名获取应用信息
 ![保存](imgs/img02.png)
 
-b. 若您的应用未上线，或是在非Google Play渠道上线，您需手动填写应用信息
+b. 若您未在Google Play上线，或发布在非Google Play渠道，您需手动填写应用信息
 ![保存](imgs/img02-2.png)
 
 ### 1.3 在应用管理列表页，获取应用的ID

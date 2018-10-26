@@ -18,7 +18,7 @@
 a. If your APP is lauched in Google Play, you can fill in package name to get APP information
 ![Add an app](imgs/img21-2.png)
 
-b. If your APP is not online, or lauched in non-Google-Play store, you should fill in APP information manually
+b. If your APP has not lauched in Google Play, or lauched in non Google Play store, you should fill in APP information manually
 ![Add an app](imgs/img21.png)
 
 ### 1.3 Obtain your APP ID in Application Management page
