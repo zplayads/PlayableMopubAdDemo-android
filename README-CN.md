@@ -12,19 +12,21 @@
 ---
 
 ## 1. 在可玩广告平台申请应用ID及广告位ID
-### 1.1 进入“应用管理”页面，点击添加“添加应用”按钮
+### 1.1 进入“[应用管理](https://sellers.zplayads.com/#/app/appList/)”页面，点击添加“添加应用”按钮
 ![“应用管理”页面](imgs/img01.png)
 
-### 1.2 填写相关信息，点击“添加”按钮，返回应用管理列表页 
-![添加](imgs/img02.png)
+### 1.2 填写相关信息，点击“保存”按钮，返回应用管理列表页 
+![保存](imgs/img02.png)
+
+![保存](imgs/img02-2.png)
 
 ### 1.3 在应用管理列表页，获取应用的ID
 ![应用管理列表页](imgs/img03.png)
 
-### 1.4 点击应用右侧的“创建广告位”按钮或者进入“广告位管理页面”点击“添加广告位”按钮
+### 1.4 点击应用右侧的“创建广告位”按钮或者进入“[广告位管理页面](https://sellers.zplayads.com/#/ad/placeList/)”点击“添加广告位”按钮
 ![创建广告位](imgs/img04.png)
 
-### 1.5填写相关信息，点击“添加”按钮，返回广告位管理列表页
+### 1.5填写相关信息，点击“保存”按钮，返回广告位管理列表页
 ![添加](imgs/img05.png)
 
 ### 1.6在广告位管理列表页，获取广告位的ID
@@ -32,17 +34,17 @@
 
 注：您在测试中可使用如下id进行测试，测试id不会产生收益，应用上线时请使用您申请的正式id。
 
-|操作系统|广告形式|  App_ID  |  Ad_Unit_id|
-|--------|---|----------|------------|
-|Android |激励视频|5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC|
-|Android|插屏|5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|19393189-C4EB-3886-60B9-13B39407064E|
+|广告形式|  App_ID  |  Ad_Unit_id|
+|---|----------|------------|
+|激励视频|5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC|
+|插屏广告|5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|19393189-C4EB-3886-60B9-13B39407064E|
 
 ## 2. 添加MoPub SDK和ZPLAY Ads SDK，步骤如下：
 ```
 dependencies {
     ...
     // 可玩广告依赖
-    compile 'com.playableads:playableads:2.0.3'
+    compile 'com.playableads:playableads:2.2.1'
     // mopub广告依赖
     compile('com.mopub:mopub-sdk:4.20.0@aar') {
         transitive = true
@@ -75,10 +77,10 @@ dependencies {
 
 
 ## 3. 将以下文件添加到工程里面
-[PlayableAdsRewardedVideo.java](app/src/main/java/com/zplay/playable/mediationmopub/PlayableAdsRewardedVideo.java)
-确保导入相关的类之后没有错误提示，记录该文件包路径，例如：（com.zplay.playable.mediationmopub.PlayableAdsRewardedVideo），这个路径用于在MoPub平台配置playableAds信息。
+[ZPLAYAdsRewardedVideo.java](app/src/main/java/com/zplay/playable/mediationmopub/ZPLAYAdsRewardedVideo.java)
+确保导入相关的类之后没有错误提示，记录该文件包路径，例如：（com.zplay.playable.mediationmopub.ZPLAYAdsRewardedVideo），这个路径用于在MoPub平台配置ZPLAYAds信息。
 
-## 4. 在MoPub平台为可玩广告配置广告位
+## 4. 在[MoPub平台](https://app.mopub.com/apps)为可玩广告配置广告位
 ### 4.1 为可玩广告新建广告位
 - a. 进入应用，点击“New ad unit”按钮
 
@@ -101,7 +103,7 @@ dependencies {
 
 ![获取广告位](imgs/img11.png)
 
-## 5. 在MoPub平台增加可玩广告为新的广告源
+## 5. 在[MoPub平台](https://app.mopub.com/networks)增加可玩广告为新的广告源
 ### 5.1 进入“Networks”页面，点击“New network”按钮
 ![add a network](imgs/img12.png)
 
@@ -117,20 +119,21 @@ dependencies {
 
 - a. 请在图示1的位置添加如下信息：
 ```
-com.zplay.playable.mediationmopub.PlayableAdsRewardedVideo
+com.zplay.playable.mediationmopub.ZPLAYAdsRewardedVideo
 ```
 
-注：(填写的是PlayableAdsRewardedVideo在项目中实际的位置)
+注：(填写的是ZPLAYAdsRewardedVideo在项目中实际的位置)
 ```
 {
     "APPID": "5C5419C7-A2DE-88BC-A311-C3E7A646F6AF",
     "AdUnitId": "3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC"
 }
 ```
-- b. 请在图示2的位置添加在可玩广告平台申请的广告位信息，格式如下：
-注意：将AndroidDemoApp替换成您在可玩广告平台申请的APPID（步骤1.3），将AndroidDemoAdUnit替换成您在可玩广告平台申请的AdUnitId（步骤1.6）。
+- b. 请在图示2的位置添加在可玩广告平台申请的广告位信息
 
-## 6. 在MoPub平台打开可玩广告广告源
+注意：将5C5419C7-A2DE-88BC-A311-C3E7A646F6AF替换成您在可玩广告平台申请的APPID（步骤1.3），将3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC替换成您在可玩广告平台申请的AdUnitId（步骤1.6）。
+
+## 6. 在[MoPub平台](https://app.mopub.com/segments)打开可玩广告广告源
 ### 6.1 进入“segments”页面，点击“Global Segment”链接
 ![Global Segment](imgs/img15.png)
 
