@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.mopub.mobileads.MoPubErrorCode;
 import com.mopub.mobileads.MoPubInterstitial;
 
+import static com.zplay.playable.mediationmopub.MainActivity.MOPUB_UNIT_ID_INTERSTITIAL;
+
 /**
  * Description:
  * <p>
@@ -18,7 +20,6 @@ import com.mopub.mobileads.MoPubInterstitial;
 
 public class InterstitialActivity extends Activity implements MoPubInterstitial.InterstitialAdListener {
     private static final String TAG = "InterstitialActivity";
-    private static final String MOPUB_UNIT_ID_INTERSTITIAL = "d19dad039dd44f9da8f09665abcd422d";
 
     View mLoadingView;
     TextView mLogView;

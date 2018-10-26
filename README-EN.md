@@ -47,7 +47,7 @@ dependencies {
     // ZPLAY Ads dependency
     compile 'com.playableads:playableads:2.2.1'
     // Mopub dependency
-    compile('com.mopub:mopub-sdk:4.20.0@aar') {
+    compile('com.mopub:mopub-sdk:5.4.0@aar') {
         transitive = true
     }
 }
