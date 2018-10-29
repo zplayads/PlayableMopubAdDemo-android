@@ -149,16 +149,11 @@ com.zplay.playable.mediationmopub.ZPLAYAdsRewardedVideo
 ![确认可玩广告配置成功](imgs/img17.png)
 
 ## 8. 在工程中使用MoPub请求可玩广告
-配置信息如下：
+详情参考Demo示例，示例中各文件作用如下：
 
-![配置信息](imgs/img18.png)
+[MainActivity](./app/src/main/java/com/zplay/playable/mediationmopub/MainActivity.java)中有mopub初始化设置，可以参考[mopub文档](https://developers.mopub.com/docs/android/initialization/)进行设置
 
-图示1：导入MoPub需要的文件
-图示2：初始化MoPub SDK
-图示3：请求广告，请正确填入在MoPub平台申请的广告位ID（详见第4步）
-图示4：展示广告，请正确填入在MoPub平台申请的广告位ID（详见第4步）
+[RewardedVideoActivity](./app/src/main/java/com/zplay/playable/mediationmopub/RewardedVideoActivity.java)是激励视频示例，在文件中填写在mopub平台上申请的激励视频广告位id，并配置好[可玩视频适配器](./app/src/main/java/com/zplay/playable/mediationmopub/ZPLAYAdsRewardedVideo.java)，就可以通过mopub获取到可玩视频广告。
 
-## 9. 调试
-查看MoPubRewardedVideoListener回调中的信息，可判断是否加载成功，以及定位问题。
+[InterstitialActivity](./app/src/main/java/com/zplay/playable/mediationmopub/InterstitialActivity.java)是插屏广告示例，在文件中填写在mopub平台申请的插屏广告位id，并配置好[可玩插屏适配器](./app/src/main/java/com/zplay/playable/mediationmopub/MPZPLAYAdsInterstitial.java)，就可以通过mopub获取到可玩插屏广告。
 
-![调试信息](imgs/img19.png)
