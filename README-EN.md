@@ -7,7 +7,6 @@
 6. Turn on ZPLAY Ads network on MoPub
 7. Confirm the configuration of ZPLAY Ads
 8. Use MoPub to request ZPLAY Ads in project
-9. Debugging
 
 
 ## 1. Apply for APP ID and Ad Unit ID on ZPLAY Ads platform
@@ -148,10 +147,10 @@ After step 6.2, the ZPLAY Ads network has been available already. Enter AdUnit M
 ![Confirm the configuration of ZPLAY Ads](imgs/img17.png)
 
 ## 8. Use MoPub to request ZPLAY Ads in project
-You can see the sample code to know how to config you ZPLAYAds within mopub. The main files in the sample code as followed:
+You can get more code samples from ZPLAYAds Demo. The main files works as follows:
 
-[MainActivity](./app/src/main/java/com/zplay/playable/mediationmopub/MainActivity.java): You can learn how to initialize mopub sdk as the mopub's [document](https://developers.mopub.com/docs/android/initialization/) said.
+As for [MainActivity](./app/src/main/java/com/zplay/playable/mediationmopub/MainActivity.java), ou can learn how to initialize mopub sdk as the mopub's [document](https://developers.mopub.com/docs/android/initialization/) said.
 
-[RewardedVideoActivity](./app/src/main/java/com/zplay/playable/mediationmopub/RewardedVideoActivity.java) is a rewarded video sample code. When you got an unitID from mopub platform, and make sure put the [adapter](./app/src/main/java/com/zplay/playable/mediationmopub/ZPLAYAdsRewardedVideo.java) into your project, you will get a rewarded video from ZPLAYAds.
+[RewardedVideoActivity](./app/src/main/java/com/zplay/playable/mediationmopub/RewardedVideoActivity.java) is a rewarded video sample code. When you get your mopub an unitID, and make sure the [adapter](./app/src/main/java/com/zplay/playable/mediationmopub/ZPLAYAdsRewardedVideo.java) in your project, you will get rewarded video from ZPLAYAds.
 
-[InterstitialActivity](./app/src/main/java/com/zplay/playable/mediationmopub/InterstitialActivity.java) is an interstitial sample code. When you got an unitID frome mopub platform, and make sure put the [adapter](./app/src/main/java/com/zplay/playable/mediationmopub/MPZPLAYAdsInterstitial.java)into your project, you will get an interstitial frome ZPLAYAds.
+[InterstitialActivity](./app/src/main/java/com/zplay/playable/mediationmopub/InterstitialActivity.java) is an interstitial sample code. When you get your mopub an unitID, and make sure the [adapter](./app/src/main/java/com/zplay/playable/mediationmopub/MPZPLAYAdsInterstitial.java) in your project, you will get interstitial from ZPLAYAds.
