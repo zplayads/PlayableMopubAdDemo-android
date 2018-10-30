@@ -7,7 +7,6 @@
 6. Turn on ZPLAY Ads network on MoPub
 7. Confirm the configuration of ZPLAY Ads
 8. Use MoPub to request ZPLAY Ads in project
-9. Debugging
 
 
 ## 1. Apply for app ID and ad unit ID on ZPLAY Ads platform
