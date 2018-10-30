@@ -147,7 +147,7 @@ After step 6.2, the ZPLAY Ads network has been available already. Enter AdUnit M
 ![Confirm the configuration of ZPLAY Ads](imgs/img17.png)
 
 ## 8. Use MoPub to request ZPLAY Ads in project
-For more code samples, refer to ZPLAYAds Demo. The main files works as follows:
+You can get more code samples from ZPLAYAds Demo. The main files works as follows:
 
 As for [MainActivity](./app/src/main/java/com/zplay/playable/mediationmopub/MainActivity.java), ou can learn how to initialize mopub sdk as the mopub's [document](https://developers.mopub.com/docs/android/initialization/) said.
 
