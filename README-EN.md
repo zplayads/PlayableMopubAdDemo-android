@@ -149,7 +149,7 @@ After step 6.2, the ZPLAY Ads network has been available already. Enter AdUnit M
 ## 8. Use MoPub to request ZPLAY Ads in project
 For more details, refer to ZPLAYAds Demo, The main files works as follows:
 
-[MainActivity](./app/src/main/java/com/zplay/playable/mediationmopub/MainActivity.java): You can learn how to initialize mopub sdk as the mopub's [document](https://developers.mopub.com/docs/android/initialization/) said.
+As for [MainActivity](./app/src/main/java/com/zplay/playable/mediationmopub/MainActivity.java)， ou can learn how to initialize mopub sdk as the mopub's [document](https://developers.mopub.com/docs/android/initialization/) said.
 
 [RewardedVideoActivity](./app/src/main/java/com/zplay/playable/mediationmopub/RewardedVideoActivity.java) is a rewarded video sample code. When you get your mopub an unitID, and make sure the [adapter](./app/src/main/java/com/zplay/playable/mediationmopub/ZPLAYAdsRewardedVideo.java) in your project, you will get rewarded video from ZPLAYAds.
 
