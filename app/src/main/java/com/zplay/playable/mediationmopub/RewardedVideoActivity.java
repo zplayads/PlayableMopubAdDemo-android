@@ -13,10 +13,10 @@ import com.mopub.mobileads.MoPubRewardedVideos;
 
 import java.util.Set;
 
+import static com.zplay.playable.mediationmopub.MainActivity.MOPUB_UNIT_ID;
+
 public class RewardedVideoActivity extends Activity implements MoPubRewardedVideoListener {
     private static final String TAG = "RewardedVideoActivity";
-
-    private static final String MOPUB_UNIT_ID = "ab638024c4b1408a9adf504c7a3fd066";
 
     View mLoadingView;
     TextView mLogView;
@@ -26,9 +26,8 @@ public class RewardedVideoActivity extends Activity implements MoPubRewardedVide
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rewarded_video);
         mLoadingView = findViewById(R.id.progress_bar);
-        mLogView = (TextView) findViewById(R.id.log_text);
+        mLogView = findViewById(R.id.log_text);
 
-        MoPubRewardedVideos.initializeRewardedVideo(this);
         MoPubRewardedVideos.setRewardedVideoListener(this);
     }
 
