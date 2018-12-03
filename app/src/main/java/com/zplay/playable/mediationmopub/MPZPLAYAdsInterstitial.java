@@ -7,7 +7,7 @@ import android.util.Log;
 import com.mopub.mobileads.CustomEventInterstitial;
 import com.mopub.mobileads.MoPubErrorCode;
 import com.playableads.PlayPreloadingListener;
-import com.playableads.PlayableAds;
+import com.playableads.PlayableInterstitial;
 import com.playableads.SimplePlayLoadingListener;
 
 import java.util.Map;
@@ -21,7 +21,7 @@ import java.util.Map;
 public class MPZPLAYAdsInterstitial extends CustomEventInterstitial {
     private static final String TAG = "MPZPLAYAdsInterstitial";
 
-    private PlayableAds mPa;
+    private PlayableInterstitial mPa;
     private String adUnitId;
 
     private CustomEventInterstitialListener mInterstitialListener;
@@ -31,8 +31,8 @@ public class MPZPLAYAdsInterstitial extends CustomEventInterstitial {
         mInterstitialListener = customEventInterstitialListener;
         adUnitId = serverExtras.get("AdUnitId");
         String appId = serverExtras.get("APPID");
-        mPa = PlayableAds.init(context, appId);
-        mPa.setAutoLoadAd(false);
+        mPa = PlayableInterstitial.init(context, appId);
+        mPa.setAutoload(false);
         Log.d(TAG, "loadInterstitial: " + !TextUtils.isEmpty(appId));
         mPa.requestPlayableAds(adUnitId, new PlayPreloadingListener() {
             @Override
@@ -58,7 +58,7 @@ public class MPZPLAYAdsInterstitial extends CustomEventInterstitial {
 
     @Override
     protected void showInterstitial() {
-        mPa.presentPlayableAD(adUnitId, new SimplePlayLoadingListener() {
+        mPa.presentPlayableAd(adUnitId, new SimplePlayLoadingListener() {
 
             @Override
             public void onLandingPageInstallBtnClicked() {
