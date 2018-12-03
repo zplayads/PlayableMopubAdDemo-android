@@ -68,7 +68,7 @@ b. 若您未在Google Play上线，或发布在非Google Play渠道，您需手�
 dependencies {
     ...
     // 可玩广告依赖
-    compile 'com.playableads:playableads:2.2.1'
+    compile 'com.playableads:playableads:2.3.0'
     // mopub广告依赖
     compile('com.mopub:mopub-sdk:5.4.0@aar') {
         transitive = true

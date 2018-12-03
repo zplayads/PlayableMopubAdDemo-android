@@ -70,7 +70,7 @@ Note: You are available to use the following ID when testing(not charge). Please
 dependencies {
     ...
     // ZPLAY Ads dependency
-    compile 'com.playableads:playableads:2.2.1'
+    compile 'com.playableads:playableads:2.3.0'
     // Mopub dependency
     compile('com.mopub:mopub-sdk:5.4.0@aar') {
         transitive = true
