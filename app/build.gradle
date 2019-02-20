@@ -24,7 +24,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.playableads:playableads:2.3.0'
+    compile 'com.playableads:playableads:2.3.1'
     testCompile 'junit:junit:4.12'
     compile('com.mopub:mopub-sdk:5.4.0@aar') {
         transitive = true

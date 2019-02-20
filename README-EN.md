@@ -1,29 +1,29 @@
 # Directory
 
 - [Directory](#directory)
-    - [1. Apply for APP ID and Ad Unit ID on ZPLAY Ads platform](#1-apply-for-app-id-and-ad-unit-id-on-zplay-ads-platform)
-        - [1.1 Click *ADD NEW APP* button in Application Management page](#11-click-add-new-app-button-in-application-management-page)
-        - [1.2 Fill in app information, and click *Save* button, then go back to Application Management](#12-fill-in-app-information-and-click-save-button-then-go-back-to-application-management)
-        - [1.3 Obtain your APP ID in Application Management page](#13-obtain-your-app-id-in-application-management-page)
-        - [1.4 Click *ADD NEW ADUNIT* button in app list, or you are also available to do this in AdUnit Management page](#14-click-add-new-adunit-button-in-app-list-or-you-are-also-available-to-do-this-in-adunit-management-page)
-        - [1.5 Fill in adunit information, and click *Save* button, then go back to AdUnit Management](#15-fill-in-adunit-information-and-click-save-button-then-go-back-to-adunit-management)
-        - [1.6 Obtain your adunit ID in AdUnit Management page](#16-obtain-your-adunit-id-in-adunit-management-page)
-    - [2. Add MoPub SDK and ZPLAY Ads SDK as below](#2-add-mopub-sdk-and-zplay-ads-sdk-as-below)
-        - [2.1 Add android project dependency](#21-add-android-project-dependency)
-        - [2.2 Add MoPub-used components in Manifest file](#22-add-mopub-used-components-in-manifest-file)
-    - [3. Add the following files into project](#3-add-the-following-files-into-project)
-    - [4. Set up ad unit for ZPLAY Ads on MoPub](#4-set-up-ad-unit-for-zplay-ads-on-mopub)
-        - [4.1 Create new adunit for ZPLAY Ads](#41-create-new-adunit-for-zplay-ads)
-        - [4.2 Obtain the existed adunit ID](#42-obtain-the-existed-adunit-id)
-    - [5. Add ZPLAY Ads as a new network on MoPub](#5-add-zplay-ads-as-a-new-network-on-mopub)
-        - [5.1 Open Networks page, click *New network* button](#51-open-networks-page-click-new-network-button)
-        - [5.2 Click *Custom SDK Network* link](#52-click-custom-sdk-network-link)
-        - [5.3 Set up the title as ZPLAY Ads Network, and configure ZPLAY Ads in the adunits which were applied in step 3(image 1 and 2)](#53-set-up-the-title-as-zplay-ads-network-and-configure-zplay-ads-in-the-adunits-which-were-applied-in-step-3image-1-and-2)
-    - [6. Turn on ZPLAY Ads network on MoPub](#6-turn-on-zplay-ads-network-on-mopub)
-        - [6.1 Open Segments page, and click Global Segment](#61-open-segments-page-and-click-global-segment)
-        - [6.2 Find the app and adunit which have been integrated to ZPLAY Ads（as the MediationMopub in screenshot below), turn on ZPLAY Ads network(as the turn on button in screenshot below)](#62-find-the-app-and-adunit-which-have-been-integrated-to-zplay-adsas-the-mediationmopub-in-screenshot-below-turn-on-zplay-ads-networkas-the-turn-on-button-in-screenshot-below)
-    - [7. Confirm the configuration of ZPLAY Ads](#7-confirm-the-configuration-of-zplay-ads)
-    - [8. Use MoPub to request ZPLAY Ads in project](#8-use-mopub-to-request-zplay-ads-in-project)
+  - [1. Apply for APP ID and Ad Unit ID on ZPLAY Ads platform](#1-apply-for-app-id-and-ad-unit-id-on-zplay-ads-platform)
+    - [1.1 Click *ADD NEW APP* button in Application Management page](#11-click-add-new-app-button-in-application-management-page)
+    - [1.2 Fill in app information, and click *Save* button, then go back to Application Management](#12-fill-in-app-information-and-click-save-button-then-go-back-to-application-management)
+    - [1.3 Obtain your APP ID in Application Management page](#13-obtain-your-app-id-in-application-management-page)
+    - [1.4 Click *ADD NEW ADUNIT* button in app list, or you are also available to do this in AdUnit Management page](#14-click-add-new-adunit-button-in-app-list-or-you-are-also-available-to-do-this-in-adunit-management-page)
+    - [1.5 Fill in adunit information, and click *Save* button, then go back to AdUnit Management](#15-fill-in-adunit-information-and-click-save-button-then-go-back-to-adunit-management)
+    - [1.6 Obtain your adunit ID in AdUnit Management page](#16-obtain-your-adunit-id-in-adunit-management-page)
+  - [2. Add MoPub SDK and ZPLAY Ads SDK as below](#2-add-mopub-sdk-and-zplay-ads-sdk-as-below)
+    - [2.1 Add android project dependency](#21-add-android-project-dependency)
+    - [2.2 Add MoPub-used components in Manifest file](#22-add-mopub-used-components-in-manifest-file)
+  - [3. Add the following files into project](#3-add-the-following-files-into-project)
+  - [4. Set up ad unit for ZPLAY Ads on MoPub](#4-set-up-ad-unit-for-zplay-ads-on-mopub)
+    - [4.1 Create new adunit for ZPLAY Ads](#41-create-new-adunit-for-zplay-ads)
+    - [4.2 Obtain the existed adunit ID](#42-obtain-the-existed-adunit-id)
+  - [5. Add ZPLAY Ads as a new network on MoPub](#5-add-zplay-ads-as-a-new-network-on-mopub)
+    - [5.1 Open Networks page, click *New network* button](#51-open-networks-page-click-new-network-button)
+    - [5.2 Click *Custom SDK Network* link](#52-click-custom-sdk-network-link)
+    - [5.3 Set up the title as ZPLAY Ads Network, and configure ZPLAY Ads in the adunits which were applied in step 3(image 1 and 2)](#53-set-up-the-title-as-zplay-ads-network-and-configure-zplay-ads-in-the-adunits-which-were-applied-in-step-3image-1-and-2)
+  - [6. Turn on ZPLAY Ads network on MoPub](#6-turn-on-zplay-ads-network-on-mopub)
+    - [6.1 Open Segments page, and click Global Segment](#61-open-segments-page-and-click-global-segment)
+    - [6.2 Find the app and adunit which have been integrated to ZPLAY Ads（as the MediationMopub in screenshot below), turn on ZPLAY Ads network(as the turn on button in screenshot below)](#62-find-the-app-and-adunit-which-have-been-integrated-to-zplay-adsas-the-mediationmopub-in-screenshot-below-turn-on-zplay-ads-networkas-the-turn-on-button-in-screenshot-below)
+  - [7. Confirm the configuration of ZPLAY Ads](#7-confirm-the-configuration-of-zplay-ads)
+  - [8. Use MoPub to request ZPLAY Ads in project](#8-use-mopub-to-request-zplay-ads-in-project)
 
 ## 1. Apply for APP ID and Ad Unit ID on ZPLAY Ads platform
 
@@ -70,7 +70,7 @@ Note: You are available to use the following ID when testing(not charge). Please
 dependencies {
     ...
     // ZPLAY Ads dependency
-    compile 'com.playableads:playableads:2.3.0'
+    compile 'com.playableads:playableads:2.3.1'
     // Mopub dependency
     compile('com.mopub:mopub-sdk:5.4.0@aar') {
         transitive = true
