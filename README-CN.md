@@ -7,7 +7,7 @@
 6. 在MoPub平台打开可玩广告广告源 
 7. 确认可玩广告配置成功 
 8. 在工程中使用MoPub请求可玩广告 
-
+9. 测试 
 
 ---
 
@@ -157,3 +157,10 @@ com.zplay.playable.mediationmopub.ZPLAYAdsRewardedVideo
 
 [InterstitialActivity](./app/src/main/java/com/zplay/playable/mediationmopub/InterstitialActivity.java)是插屏广告示例，在文件中填写在mopub平台申请的插屏广告位id，并配置好[可玩插屏适配器](./app/src/main/java/com/zplay/playable/mediationmopub/MPZPLAYAdsInterstitial.java)，就可以通过mopub获取到ZPLAYAds插屏广告。
 
+## 9. 测试
+您在测试中可使用如下ID进行测试，测试ID不会产生收益，应用上线时请使用您申请的正式ID。
+
+|广告形式|  App_ID  |  Ad_Unit_id|
+|---|----------|------------|
+|激励视频|5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC|
+|插屏广告|5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|19393189-C4EB-3886-60B9-13B39407064E|
