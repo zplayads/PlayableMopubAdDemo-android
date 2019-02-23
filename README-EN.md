@@ -25,6 +25,7 @@
     - [6.2 Find the app and adunit which have been integrated to ZPLAY Ads（as the MediationMopub in screenshot below), turn on ZPLAY Ads network(as the turn on button in screenshot below)](#62-find-the-app-and-adunit-which-have-been-integrated-to-zplay-adsas-the-mediationmopub-in-screenshot-below-turn-on-zplay-ads-networkas-the-turn-on-button-in-screenshot-below)
   - [7. Confirm the configuration of ZPLAY Ads](#7-confirm-the-configuration-of-zplay-ads)
   - [8. Use MoPub to request ZPLAY Ads in project](#8-use-mopub-to-request-zplay-ads-in-project)
+  - [9. Test](#9-Test)
 
 
 ## 1. Apply for APP ID and Ad Unit ID on ZPLAY Ads platform
@@ -192,3 +193,10 @@ As for [MainActivity](./app/src/main/java/com/zplay/playable/mediationmopub/Main
 
 [RewardedVideoActivity](./app/src/main/java/com/zplay/playable/mediationmopub/RewardedVideoActivity.java) is a rewarded video sample code. When you get your mopub an unitID, and make sure the [adapter](./app/src/main/java/com/zplay/playable/mediationmopub/ZPLAYAdsRewardedVideo.java) in your project, you will get rewarded video from ZPLAY Ads.
 
+## 9. Test
+You are available to use the following ID when testing(not charge). Please switch to the ID you applied in production mode.
+
+| OS      | Ad_Type        | App_ID                               | Ad_Unit_id                           |
+| ------- | -------------- | ------------------------------------ | ------------------------------------ |
+| Android | Rewarded video | 5C5419C7-A2DE-88BC-A311-C3E7A646F6AF | 3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC |
+| Android | Interstitial   | 5C5419C7-A2DE-88BC-A311-C3E7A646F6AF | 19393189-C4EB-3886-60B9-13B39407064E |
