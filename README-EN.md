@@ -73,9 +73,9 @@ Note: You are available to use the following ID when testing(not charge). Please
 dependencies {
     ...
     // ZPLAY Ads dependency
-    compile 'com.playableads:playableads:2.4.1'
+    implementation 'com.playableads:playableads:2.4.1'
     // Mopub dependency
-    compile('com.mopub:mopub-sdk:5.6.0@aar') {
+    implementation('com.mopub:mopub-sdk:5.6.0@aar') {
         transitive = true
     }
 }
