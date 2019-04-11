@@ -162,7 +162,7 @@ This document only shows how to configure RewardVideo adapter, you can configure
 com.zplay.playable.mediationmopub.ZPLAYAdsRewardedVideo
 ```
 
-Interstitial should be
+For interstitial ad unit, please use as follows,
 ```java
 com.zplay.playable.mediationmopub.MPZPLAYAdsInterstitial
 ```

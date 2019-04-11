@@ -159,7 +159,7 @@ dependencies {
 ```java
 com.zplay.playable.mediationmopub.ZPLAYAdsRewardedVideo
 ```
-插屏应为：
+若您要配置插屏广告位，请使用如下信息：
 ```java
 com.zplay.playable.mediationmopub.MPZPLAYAdsInterstitial
 ```
