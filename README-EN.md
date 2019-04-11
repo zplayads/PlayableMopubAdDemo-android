@@ -73,9 +73,9 @@ Note: You are available to use the following ID when testing(not charge). Please
 dependencies {
     ...
     // ZPLAY Ads dependency
-    compile 'com.playableads:playableads:2.3.1'
+    implementation 'com.playableads:playableads:2.4.1'
     // Mopub dependency
-    compile('com.mopub:mopub-sdk:5.4.0@aar') {
+    implementation('com.mopub:mopub-sdk:5.6.0@aar') {
         transitive = true
     }
 }
@@ -105,8 +105,14 @@ dependencies {
 
 ## 3. Add the following files into project
 
-[ZPLAYAdsRewardedVideo.java](app/src/main/java/com/zplay/playable/mediationmopub/ZPLAYAdsRewardedVideo.java)
+1. Reward video adapter: [ZPLAYAdsRewardedVideo.java](./app/src/main/java/com/zplay/playable/mediationmopub/ZPLAYAdsRewardedVideo.java)
+
+2. Interstitial adapter: [MPZPLAYAdsInterstitial.java](./app/src/main/java/com/zplay/playable/mediationmopub/MPZPLAYAdsInterstitial.java)
+
+
 Please ensure no errors after classes imported. Then record the path of package, e.g (com.zplay.playable.mediationmopub.ZPLAYAdsRewardedVideo) which is used to configure ZPLAYAds on MoPub.
+
+This document only shows how to configure RewardVideo adapter, you can configure the interstitial adapter by the same way.
 
 ## 4. Set up ad unit for ZPLAY Ads on [MoPub](https://app.mopub.com/apps)
 

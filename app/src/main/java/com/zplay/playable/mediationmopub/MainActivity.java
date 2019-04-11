@@ -11,9 +11,6 @@ import com.mopub.common.MoPub;
 import com.mopub.common.SdkConfiguration;
 import com.mopub.common.SdkInitializationListener;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Description:
  * <p>
@@ -29,10 +26,8 @@ public class MainActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        List<String> networksToInit = new ArrayList<>();
 
         SdkConfiguration sdkConfiguration = new SdkConfiguration.Builder(MOPUB_UNIT_ID)
-                .withNetworksToInit(networksToInit)
                 .build();
 
         MoPub.initializeSdk(this, sdkConfiguration, initSdkListener());

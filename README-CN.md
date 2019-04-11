@@ -12,7 +12,7 @@
   - [2. 添加MoPub SDK和ZPLAY Ads SDK，步骤如下：](#2-%E6%B7%BB%E5%8A%A0mopub-sdk%E5%92%8Czplay-ads-sdk%E6%AD%A5%E9%AA%A4%E5%A6%82%E4%B8%8B)
     - [2.1 添加Android工程依赖](#21-%E6%B7%BB%E5%8A%A0android%E5%B7%A5%E7%A8%8B%E4%BE%9D%E8%B5%96)
     - [2.2 在Manifest文件下添加MoPub使用到的组件](#22-%E5%9C%A8manifest%E6%96%87%E4%BB%B6%E4%B8%8B%E6%B7%BB%E5%8A%A0mopub%E4%BD%BF%E7%94%A8%E5%88%B0%E7%9A%84%E7%BB%84%E4%BB%B6)
-  - [3. 将以下文件添加到工程里面](#3-%E5%B0%86%E4%BB%A5%E4%B8%8B%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%B7%A5%E7%A8%8B%E9%87%8C%E9%9D%A2)
+  - [3. 添加适配器文件](#3-%E6%B7%BB%E5%8A%A0%E9%80%82%E9%85%8D%E5%99%A8%E6%96%87%E4%BB%B6)
   - [4. 在MoPub平台为可玩广告配置广告位](#4-%E5%9C%A8mopub%E5%B9%B3%E5%8F%B0%E4%B8%BA%E5%8F%AF%E7%8E%A9%E5%B9%BF%E5%91%8A%E9%85%8D%E7%BD%AE%E5%B9%BF%E5%91%8A%E4%BD%8D)
     - [4.1 为可玩广告新建广告位](#41-%E4%B8%BA%E5%8F%AF%E7%8E%A9%E5%B9%BF%E5%91%8A%E6%96%B0%E5%BB%BA%E5%B9%BF%E5%91%8A%E4%BD%8D)
     - [4.2 获取已有广告位的ID](#42-%E8%8E%B7%E5%8F%96%E5%B7%B2%E6%9C%89%E5%B9%BF%E5%91%8A%E4%BD%8D%E7%9A%84id)
@@ -71,9 +71,9 @@ b. 若您未在Google Play上线，或发布在非Google Play渠道，您需手�
 dependencies {
     ...
     // 可玩广告依赖
-    compile 'com.playableads:playableads:2.3.1'
+    implementation 'com.playableads:playableads:2.4.1'
     // mopub广告依赖
-    compile('com.mopub:mopub-sdk:5.4.0@aar') {
+    implementation('com.mopub:mopub-sdk:5.6.0@aar') {
         transitive = true
     }
 }
@@ -103,10 +103,14 @@ dependencies {
 </application>
 ```
 
-## 3. 将以下文件添加到工程里面
+## 3. 添加适配器文件
+1. 激励视频适配器及位置：[ZPLAYAdsRewardedVideo.java](./app/src/main/java/com/zplay/playable/mediationmopub/ZPLAYAdsRewardedVideo.java)
 
-[ZPLAYAdsRewardedVideo.java](app/src/main/java/com/zplay/playable/mediationmopub/ZPLAYAdsRewardedVideo.java)
+2. 插屏适配器及位置：[MPZPLAYAdsInterstitial.java](./app/src/main/java/com/zplay/playable/mediationmopub/MPZPLAYAdsInterstitial.java)
+
 确保导入相关的类之后没有错误提示，记录该文件包路径，例如：（com.zplay.playable.mediationmopub.ZPLAYAdsRewardedVideo），这个路径用于在MoPub平台配置ZPLAYAds信息。
+
+文档整体以激励视频为例，插屏配置过程与激励视频相似。
 
 ## 4. 在[MoPub平台](https://app.mopub.com/apps)为可玩广告配置广告位
 
