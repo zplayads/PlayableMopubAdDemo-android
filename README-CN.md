@@ -25,7 +25,7 @@
     - [6.2 找到接入可玩广告的应用（如示例中MediationMopub）及广告位（示例中的新可玩广告），打开可玩广告广告源（图中的turn on所示的按钮）](#62-%E6%89%BE%E5%88%B0%E6%8E%A5%E5%85%A5%E5%8F%AF%E7%8E%A9%E5%B9%BF%E5%91%8A%E7%9A%84%E5%BA%94%E7%94%A8%E5%A6%82%E7%A4%BA%E4%BE%8B%E4%B8%ADmediationmopub%E5%8F%8A%E5%B9%BF%E5%91%8A%E4%BD%8D%E7%A4%BA%E4%BE%8B%E4%B8%AD%E7%9A%84%E6%96%B0%E5%8F%AF%E7%8E%A9%E5%B9%BF%E5%91%8A%E6%89%93%E5%BC%80%E5%8F%AF%E7%8E%A9%E5%B9%BF%E5%91%8A%E5%B9%BF%E5%91%8A%E6%BA%90%E5%9B%BE%E4%B8%AD%E7%9A%84turn-on%E6%89%80%E7%A4%BA%E7%9A%84%E6%8C%89%E9%92%AE)
   - [7. 确认可玩广告配置成功](#7-%E7%A1%AE%E8%AE%A4%E5%8F%AF%E7%8E%A9%E5%B9%BF%E5%91%8A%E9%85%8D%E7%BD%AE%E6%88%90%E5%8A%9F)
   - [8. 在工程中使用MoPub请求可玩广告](#8-%E5%9C%A8%E5%B7%A5%E7%A8%8B%E4%B8%AD%E4%BD%BF%E7%94%A8mopub%E8%AF%B7%E6%B1%82%E5%8F%AF%E7%8E%A9%E5%B9%BF%E5%91%8A)
-  - [9. 测试](#9-测试)
+  - [9. 测试](#9-%E6%B5%8B%E8%AF%95)
 
 
 ## 1. 在可玩广告平台申请应用ID及广告位ID
@@ -158,6 +158,10 @@ dependencies {
 
 ```java
 com.zplay.playable.mediationmopub.ZPLAYAdsRewardedVideo
+```
+插屏应为：
+```java
+com.zplay.playable.mediationmopub.MPZPLAYAdsInterstitial
 ```
 
 注：(填写的是ZPLAYAdsRewardedVideo在项目中实际的位置)

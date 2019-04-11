@@ -25,7 +25,7 @@
     - [6.2 Find the app and adunit which have been integrated to ZPLAY Ads（as the MediationMopub in screenshot below), turn on ZPLAY Ads network(as the turn on button in screenshot below)](#62-find-the-app-and-adunit-which-have-been-integrated-to-zplay-adsas-the-mediationmopub-in-screenshot-below-turn-on-zplay-ads-networkas-the-turn-on-button-in-screenshot-below)
   - [7. Confirm the configuration of ZPLAY Ads](#7-confirm-the-configuration-of-zplay-ads)
   - [8. Use MoPub to request ZPLAY Ads in project](#8-use-mopub-to-request-zplay-ads-in-project)
-  - [9. Test](#9-Test)
+  - [9. Test](#9-test)
 
 
 ## 1. Apply for APP ID and Ad Unit ID on ZPLAY Ads platform
@@ -160,6 +160,11 @@ This document only shows how to configure RewardVideo adapter, you can configure
 
 ```java
 com.zplay.playable.mediationmopub.ZPLAYAdsRewardedVideo
+```
+
+Interstitial should be
+```java
+com.zplay.playable.mediationmopub.MPZPLAYAdsInterstitial
 ```
 
 > Note:Please fill in the existed position of ZPLAYAdsRewardedVideo in project.
