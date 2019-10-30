@@ -20,7 +20,6 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
-        maven { url "https://s3.amazonaws.com/moat-sdk-builds" }
         maven {
             url 'https://maven.google.com/'
             name 'Google'
