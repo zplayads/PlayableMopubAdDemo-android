@@ -1,9 +1,8 @@
-package com.zplay.playable.mediationmopub;
+package com.playableads.mopubadapter;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.text.TextUtils;
 import android.util.Log;
 
 import com.mopub.common.LifecycleListener;
@@ -14,8 +13,16 @@ import com.mopub.mobileads.MoPubRewardedVideoManager;
 import com.playableads.PlayLoadingListener;
 import com.playableads.PlayPreloadingListener;
 import com.playableads.PlayableAds;
+import com.playableads.PlayableAdsSettings;
 
 import java.util.Map;
+
+import static com.playableads.mopubadapter.ZUtils.getAppId;
+import static com.playableads.mopubadapter.ZUtils.getChanelId;
+import static com.playableads.mopubadapter.ZUtils.getGDPRState;
+import static com.playableads.mopubadapter.ZUtils.getUnitId;
+import static com.playableads.mopubadapter.ZUtils.isAutoLoad;
+import static com.playableads.mopubadapter.ZUtils.shouldRequest_READ_PHONE_STATE;
 
 /**
  * Description: mopub聚合playableAds的适配器
@@ -30,17 +37,20 @@ public class ZPLAYAdsRewardedVideo extends CustomEventRewardedVideo {
 
     @Override
     protected boolean checkAndInitializeSdk(@NonNull Activity launcherActivity, @NonNull Map<String, Object> localExtras, @NonNull Map<String, String> serverExtras) throws Exception {
-        String appId = serverExtras.get("APPID");
+        PlayableAdsSettings.setGDPRConsent(getGDPRState(serverExtras));
+        PlayableAdsSettings.enableAutoRequestPermissions(shouldRequest_READ_PHONE_STATE(serverExtras));
+
+        final String appId = getAppId(serverExtras);
+
         mPa = PlayableAds.init(launcherActivity, appId);
-        mPa.setAutoLoadAd(false);
-        Log.d(TAG, "PlayableAds init: " + !TextUtils.isEmpty(appId));
+        mPa.setChannelId(getChanelId(serverExtras));
+        mPa.setAutoLoadAd(isAutoLoad(serverExtras));
         return true;
     }
 
     @Override
     protected void loadWithSdkInitialized(@NonNull Activity activity, @NonNull Map<String, Object> localExtras, @NonNull Map<String, String> serverExtras) throws Exception {
-        adUnitId = serverExtras.get("AdUnitId");
-        Log.d(TAG, "loadWithSdkInitialized");
+        adUnitId = getUnitId(serverExtras);
         mPa.requestPlayableAds(adUnitId, new PlayPreloadingListener() {
             @Override
             public void onLoadFinished() {
@@ -49,7 +59,7 @@ public class ZPLAYAdsRewardedVideo extends CustomEventRewardedVideo {
 
             @Override
             public void onLoadFailed(int i, String s) {
-                Log.d(TAG, "onLoadFailed: " + s);
+                Log.i(TAG, "onLoadFailed: " + s);
                 MoPubRewardedVideoManager.onRewardedVideoLoadFailure(ZPLAYAdsRewardedVideo.class, adUnitId, MoPubErrorCode.MRAID_LOAD_ERROR);
             }
         });
@@ -66,7 +76,6 @@ public class ZPLAYAdsRewardedVideo extends CustomEventRewardedVideo {
         mPa.presentPlayableAD(adUnitId, new PlayLoadingListener() {
             @Override
             public void onVideoStart() {
-                Log.d(TAG, "onVideoStart: ");
                 MoPubRewardedVideoManager.onRewardedVideoStarted(ZPLAYAdsRewardedVideo.class, adUnitId);
             }
 
@@ -86,13 +95,12 @@ public class ZPLAYAdsRewardedVideo extends CustomEventRewardedVideo {
 
             @Override
             public void onAdClosed() {
-                Log.d(TAG, "onAdClosed: ");
                 MoPubRewardedVideoManager.onRewardedVideoClosed(ZPLAYAdsRewardedVideo.class, adUnitId);
             }
 
             @Override
             public void onAdsError(int i, String s) {
-                Log.d(TAG, "onAdsError: ");
+                Log.i(TAG, "onAdsError: " + s);
                 MoPubRewardedVideoManager.onRewardedVideoPlaybackError(ZPLAYAdsRewardedVideo.class, adUnitId, MoPubErrorCode.VIDEO_PLAYBACK_ERROR);
             }
         });

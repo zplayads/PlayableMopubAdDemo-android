@@ -13,7 +13,7 @@ import com.mopub.mobileads.MoPubRewardedVideos;
 
 import java.util.Set;
 
-import static com.zplay.playable.mediationmopub.MainActivity.MOPUB_UNIT_ID;
+import static com.zplay.playable.mediationmopub.MainActivity.MOPUB_UNIT_ID_REWARDED_VIDEO;
 
 public class RewardedVideoActivity extends Activity implements MoPubRewardedVideoListener {
     private static final String TAG = "RewardedVideoActivity";
@@ -34,13 +34,13 @@ public class RewardedVideoActivity extends Activity implements MoPubRewardedVide
     public void requestAd(View view) {
         mLogView.setText("");
         mLoadingView.setVisibility(View.VISIBLE);
-        MoPubRewardedVideos.loadRewardedVideo(MOPUB_UNIT_ID);
+        MoPubRewardedVideos.loadRewardedVideo(MOPUB_UNIT_ID_REWARDED_VIDEO);
         addLog("start loading advertising.");
     }
 
 
     public void presentAd(View view) {
-        MoPubRewardedVideos.showRewardedVideo(MOPUB_UNIT_ID);
+        MoPubRewardedVideos.showRewardedVideo(MOPUB_UNIT_ID_REWARDED_VIDEO);
     }
 
 
