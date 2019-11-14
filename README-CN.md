@@ -59,14 +59,6 @@ b. 若您未在Google Play上线，或发布在非Google Play渠道，您需手�
 
 ![获取广告位](imgs/img06.png)
 
-注：您在测试中可使用如下id进行测试，测试id不会产生收益，应用上线时请使用您申请的正式id。
-
-|广告形式|  App_ID  |  Ad_Unit_id|
-|---|----------|------------|
-|Banner|5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|F22F347B-3D57-0C70-0B13-EFCFDF402EBA|
-|激励视频|5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC|
-|插屏广告|5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|19393189-C4EB-3886-60B9-13B39407064E|
-
 ## 2. 添加MoPub SDK和ZPLAY Ads SDK，步骤如下：
 
 ```java

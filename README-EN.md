@@ -59,14 +59,6 @@ b. If your APP has not launched in Google Play, or launched in non Google Play s
 
 ![Obtain adunit ID](imgs/img25.png)
 
-Note: You are available to use the following ID when testing(not charge). Please switch to the ID you applied in production mode.
-
-| OS      | Ad_Type        | App_ID                               | Ad_Unit_id                           |
-| ------- | -------------- | ------------------------------------ | ------------------------------------ |
-| Android |Banner|5C5419C7-A2DE-88BC-A311-C3E7A646F6AF|F22F347B-3D57-0C70-0B13-EFCFDF402EBA|
-| Android | Rewarded video | 5C5419C7-A2DE-88BC-A311-C3E7A646F6AF | 3FBEFA05-3A8B-2122-24C7-A87D0BC9FEEC |
-| Android | Interstitial   | 5C5419C7-A2DE-88BC-A311-C3E7A646F6AF | 19393189-C4EB-3886-60B9-13B39407064E |
-
 ## 2. Add MoPub SDK and ZPLAY Ads SDK as below
 
 ### 2.1 Add android project dependency
