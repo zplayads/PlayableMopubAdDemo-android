@@ -25,7 +25,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'com.playableads:playableads:2.6.0-beta04'
+    implementation 'com.playableads:playableads:2.6.0'
     implementation('com.mopub:mopub-sdk:5.6.0@aar') {
         transitive = true
         // this dependency is vary difficult to download on my side, so I just remove it.
