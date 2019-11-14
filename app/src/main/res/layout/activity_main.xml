@@ -6,22 +6,27 @@
     android:orientation="vertical"
     android:padding="20dp">
 
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:onClick="showRewardedVideo"
-        android:text="Rewarded Video"
+        android:onClick="showBanner"
+        android:text="Banner"
         android:textAllCaps="false"
         android:textSize="28sp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
         android:onClick="showInterstitial"
         android:text="Interstitial"
+        android:textAllCaps="false"
+        android:textSize="28sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showRewardedVideo"
+        android:text="Rewarded Video"
         android:textAllCaps="false"
         android:textSize="28sp" />
 </LinearLayout>

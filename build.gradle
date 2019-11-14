@@ -20,7 +20,7 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
-        maven { url "https://s3.amazonaws.com/moat-sdk-builds" }
+        maven { url 'http://47.95.29.186:8081/artifactory/gradle-dev-local' }
         maven {
             url 'https://maven.google.com/'
             name 'Google'

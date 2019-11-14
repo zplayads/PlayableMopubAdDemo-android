@@ -5,7 +5,7 @@ android {
 
     defaultConfig {
         applicationId "com.zplay.playable.mediationmopub"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -31,9 +31,11 @@ dependencies {
     })
     testImplementation 'junit:junit:4.12'
 
-    implementation 'com.playableads:playableads:2.4.1'
     implementation('com.mopub:mopub-sdk:5.6.0@aar') {
         transitive = true
+        // this dependency is vary difficult to download on my side, so I just remove it.
+        exclude group: 'com.moat.analytics.mobile.mpub', module: 'moat-mobile-app-kit'
     }
+    implementation project(path: ':mopubadapter')
 
 }
